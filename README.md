@@ -1,1 +1,3 @@
-# leetcode
+<!-- @format -->
+
+# leetcode practice

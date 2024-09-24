@@ -22,14 +22,14 @@ func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
 	}
 
 	// Ensure root and subRoot are same trees
-	if isSameTree(root, subRoot) {
+	if checkSameTree(root, subRoot) {
 		return true
 	}
 
 	return isSubtree(root.Left, subRoot) || isSubtree(root.Right, subRoot)
 }
 
-func isSameTree(a *TreeNode, b *TreeNode) bool {
+func checkSameTree(a *TreeNode, b *TreeNode) bool {
 	if a == nil && b == nil {
 		return true
 	}
@@ -37,5 +37,5 @@ func isSameTree(a *TreeNode, b *TreeNode) bool {
 		return false
 	}
 
-	return isSameTree(a.Left, b.Left) && isSameTree(a.Right, b.Right)
+	return checkSameTree(a.Left, b.Left) && checkSameTree(a.Right, b.Right)
 }

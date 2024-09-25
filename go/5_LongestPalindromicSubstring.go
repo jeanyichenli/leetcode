@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -45,13 +44,4 @@ func longestPalindrome(s string) string {
 	}
 
 	return s[(maxCenter-maxLen)/2 : (maxCenter+maxLen)/2]
-}
-
-func main() {
-	// input := "babad" // Example 1
-	input := "cbbd" // Example 2
-
-	output := longestPalindrome(input)
-
-	fmt.Println(output)
 }
